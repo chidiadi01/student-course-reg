@@ -35,7 +35,7 @@ components:
           type: string
         level:
           type: string
-          description: e.g. "100", "200", "Freshman", "Sophomore", etc.
+          description: e.g. "100", "200", "300", "400", "500"
         profilePicture:
           type: string
           format: uri
