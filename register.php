@@ -12,8 +12,7 @@ require_once 'functions/helpers.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - Chidiadi's Student Management App</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <?php include 'bootstrap.php'; ?>
 </head>
 
 <body>
@@ -173,7 +172,7 @@ require_once 'functions/helpers.php';
                     }
 
                     //CHECK THESE 
-                   /*  echo "Filename: " . $_FILES['profile_picture']['name'] . "<br>";
+                    /*  echo "Filename: " . $_FILES['profile_picture']['name'] . "<br>";
                     echo "Type : " . $_FILES['profile_picture']['type'] . "<br>";
                     echo "Size : " . $_FILES['profile_picture']['size'] . "<br>";
                     echo "Temp name: " . $_FILES['profile_picture']['tmp_name'] . "<br>";
@@ -199,7 +198,7 @@ require_once 'functions/helpers.php';
                     if (file_exists($students_file)) {
                         $students_json = file_get_contents($students_file);
 
-                        
+
                         $students = json_decode($students_json, true) ?? [];
                     }
                     array_push($students, $user_data);
@@ -219,9 +218,5 @@ require_once 'functions/helpers.php';
 
 
     </body>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </html>
